@@ -1,10 +1,10 @@
 package hopperOptimizations.settings;
 
-import carpet.settings.Rule;
 import hopperOptimizations.utils.EntityHopperInteraction;
 import hopperOptimizations.utils.OptimizedInventoriesRule;
+import optionsmod.settings.Rule;
 
-import static carpet.settings.RuleCategory.*;
+import static optionsmod.settings.RuleCategory.*;
 
 /**
  * Here is your example Settings class you can plug to use carpetmod /carpet settings command

@@ -1,7 +1,5 @@
 package hopperOptimizations.utils;
 
-import carpet.settings.ParsedRule;
-import carpet.settings.Validator;
 import hopperOptimizations.annotation.Feature;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -11,6 +9,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import optionsmod.settings.ParsedRule;
+import optionsmod.settings.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
