@@ -20,7 +20,7 @@ public class HopperOptimizationsExtension implements OptionsmodExtension {
     private SettingsManager mySettingManager;
 
     public HopperOptimizationsExtension() {
-        mySettingManager = new SettingsManager("0.1.9", "hopperoptimizations", "Hopper Optimizations Mod");
+        mySettingManager = new SettingsManager("0.1.10", "hopperoptimizations", "Hopper Optimizations Mod");
     }
 
     public static void noop() {
