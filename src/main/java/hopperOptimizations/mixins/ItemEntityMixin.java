@@ -49,7 +49,7 @@ public abstract class ItemEntityMixin extends Entity {
         if (!Settings.simplifiedItemElevatorCheck)
             return itemEntity.world.doesNotCollide(itemEntity);
         //only do block collisions, shulkers, minecarts and boats no push out items or have the "item elevator" effect
-        return itemEntity.world.method_20812(itemEntity, itemEntity.getBoundingBox()).allMatch(VoxelShape::isEmpty);
+        return itemEntity.world.getBlockCollisions(itemEntity, itemEntity.getBoundingBox()).allMatch(VoxelShape::isEmpty);
     }
 
 }
