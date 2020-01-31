@@ -1,8 +1,8 @@
 package hopperOptimizations.utils;
 
-import carpet.settings.ParsedRule;
-import carpet.settings.Validator;
 import net.minecraft.server.command.ServerCommandSource;
+import optionsmod.settings.ParsedRule;
+import optionsmod.settings.Validator;
 
 public class OptimizedInventoriesRule extends Validator<Boolean> {
 

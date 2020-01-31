@@ -1,6 +1,5 @@
 package hopperOptimizations.utils;
 
-import carpet.CarpetServer;
 import hopperOptimizations.settings.Settings;
 import it.unimi.dsi.fastutil.HashCommon;
 import net.minecraft.block.entity.ShulkerBoxBlockEntity;
@@ -11,6 +10,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import optionsmod.OptionsmodServer;
 import org.apache.commons.lang3.NotImplementedException;
 
 import java.util.Arrays;
@@ -176,7 +176,7 @@ public class InventoryOptimizer {
         } catch (IllegalStateException e) {
             initialized = false;
             Text text = new LiteralText("Detected broken optimizer ( " + e.getMessage() + ") at " + Arrays.toString(e.getStackTrace()));
-            CarpetServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
+            OptionsmodServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
         }
     }
 

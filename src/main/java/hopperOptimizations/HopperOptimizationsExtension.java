@@ -1,9 +1,9 @@
 package hopperOptimizations;
 
-import carpet.CarpetExtension;
-import carpet.CarpetServer;
-import carpet.settings.SettingsManager;
 import hopperOptimizations.settings.Settings;
+import optionsmod.OptionsmodExtension;
+import optionsmod.OptionsmodServer;
+import optionsmod.settings.SettingsManager;
 
 /**
  * Hopper Optimization Mod
@@ -12,12 +12,15 @@ import hopperOptimizations.settings.Settings;
  * adapted from the fabric carpet extension example mod.
  * bloom filter contribution originally by skyrising
  */
-public class HopperOptimizationsExtension implements CarpetExtension {
-    private static SettingsManager mySettingManager;
-
+public class HopperOptimizationsExtension implements OptionsmodExtension {
     static {
+        OptionsmodServer.manageExtension(new HopperOptimizationsExtension());
+    }
+
+    private SettingsManager mySettingManager;
+
+    public HopperOptimizationsExtension() {
         mySettingManager = new SettingsManager("0.1.13", "hopperoptimizations", "Hopper Optimizations Mod");
-        CarpetServer.manageExtension(new HopperOptimizationsExtension());
     }
 
     public static void noop() {
@@ -25,8 +28,8 @@ public class HopperOptimizationsExtension implements CarpetExtension {
 
     @Override
     public void onGameStarted() {
-        // let's /carpet handle our few simple settings
-        CarpetServer.settingsManager.parseSettingsClass(Settings.class);
+        // let's /hopperoptimizations handle our few simple settings
+        mySettingManager.parseSettingsClass(Settings.class);
     }
 
     @Override
