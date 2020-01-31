@@ -1,6 +1,5 @@
 package hopperOptimizations.mixins;
 
-import carpet.CarpetServer;
 import hopperOptimizations.annotation.Feature;
 import hopperOptimizations.settings.Settings;
 import hopperOptimizations.utils.*;
@@ -25,6 +24,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkManager;
+import optionsmod.OptionsmodServer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -371,7 +371,7 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
             } catch (IllegalStateException e) {
                 ((HopperBlockEntityMixin) hopper).invalidateEntityHopperInteractionCache();
                 Text text = new LiteralText("Detected wrong entity hopper interaction ( " + e.getMessage() + ")!");
-                CarpetServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
+                OptionsmodServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
                 e.printStackTrace();
             }
         }
@@ -450,7 +450,7 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
                 } catch (IllegalStateException e) {
                     ((HopperBlockEntityMixin) hopper).invalidateEntityHopperInteractionCache();
                     Text text = new LiteralText("Detected wrong entity hopper interaction ( " + e.getMessage() + ")!");
-                    CarpetServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
+                    OptionsmodServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
                     e.printStackTrace();
                 }
             }
@@ -1039,7 +1039,7 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
                 } catch (IllegalStateException e) {
                     this.invalidateEntityHopperInteractionCache();
                     Text text = new LiteralText("Detected wrong entity hopper interaction ( " + e.getMessage() + ")!");
-                    CarpetServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
+                    OptionsmodServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
                     e.printStackTrace();
                 }
             }
