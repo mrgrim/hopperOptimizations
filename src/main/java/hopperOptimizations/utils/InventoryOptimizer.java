@@ -211,7 +211,7 @@ public class InventoryOptimizer {
         if (index >= totalSlots) {
             if (Settings.debugOptimizedInventories) {
                 Text text = new LiteralText("Detected too large index in InventoryOptimizer.onItemStackCountChanged");
-                CarpetServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
+                OptionsmodServer.minecraft_server.getPlayerManager().broadcastChatMessage(text, false);
             }
             return;
         }
