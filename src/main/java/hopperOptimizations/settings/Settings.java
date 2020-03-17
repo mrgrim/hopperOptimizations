@@ -1,9 +1,8 @@
 package hopperOptimizations.settings;
 
-import hopperOptimizations.utils.EntityHopperInteraction;
 import hopperOptimizations.utils.OptimizedInventoriesRule;
-import optionsmod.settings.Rule;
 import hopperOptimizations.workarounds.EntityHopperInteraction;
+import optionsmod.settings.Rule;
 
 import static optionsmod.settings.RuleCategory.*;
 

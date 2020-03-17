@@ -14,14 +14,14 @@ import optionsmod.settings.SettingsManager;
  */
 public class HopperOptimizationsExtension implements OptionsmodExtension {
     static {
-        String myVersion = "0.1.16";
-
         OptionsmodServer.manageExtension(new HopperOptimizationsExtension());
     }
 
     private SettingsManager mySettingManager;
 
     public HopperOptimizationsExtension() {
+        String myVersion = "0.1.16";
+
         mySettingManager = new SettingsManager(myVersion, "hopperoptimizations", "Hopper Optimizations Mod");
     }
 
