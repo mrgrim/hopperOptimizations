@@ -14,13 +14,15 @@ import optionsmod.settings.SettingsManager;
  */
 public class HopperOptimizationsExtension implements OptionsmodExtension {
     static {
+        String myVersion = "0.1.16";
+
         OptionsmodServer.manageExtension(new HopperOptimizationsExtension());
     }
 
     private SettingsManager mySettingManager;
 
     public HopperOptimizationsExtension() {
-        mySettingManager = new SettingsManager("0.1.15", "hopperoptimizations", "Hopper Optimizations Mod");
+        mySettingManager = new SettingsManager(myVersion, "hopperoptimizations", "Hopper Optimizations Mod");
     }
 
     public static void noop() {

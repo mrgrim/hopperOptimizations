@@ -1,7 +1,8 @@
-package hopperOptimizations.utils;
+package hopperOptimizations.workarounds;
 
 import hopperOptimizations.annotation.Feature;
 import hopperOptimizations.settings.Settings;
+import hopperOptimizations.utils.IHopper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
