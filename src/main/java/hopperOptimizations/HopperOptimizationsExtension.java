@@ -1,5 +1,6 @@
 package hopperOptimizations;
 
+import carpet.settings.SettingsManager;
 import hopperOptimizations.settings.Settings;
 import optionsmod.OptionsmodExtension;
 import optionsmod.OptionsmodServer;
@@ -13,16 +14,13 @@ import optionsmod.settings.SettingsManager;
  * bloom filter contribution originally by skyrising
  */
 public class HopperOptimizationsExtension implements OptionsmodExtension {
+    private static SettingsManager mySettingManager;
+
     static {
-        OptionsmodServer.manageExtension(new HopperOptimizationsExtension());
-    }
-
-    private SettingsManager mySettingManager;
-
-    public HopperOptimizationsExtension() {
-        String myVersion = "0.1.16";
+        String myVersion = "0.1.17";
 
         mySettingManager = new SettingsManager(myVersion, "hopperoptimizations", "Hopper Optimizations Mod");
+        OptionsmodServer.manageExtension(new HopperOptimizationsExtension());
     }
 
     public static void noop() {
