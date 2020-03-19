@@ -1,6 +1,5 @@
 package hopperOptimizations;
 
-import carpet.settings.SettingsManager;
 import hopperOptimizations.settings.Settings;
 import optionsmod.OptionsmodExtension;
 import optionsmod.OptionsmodServer;
