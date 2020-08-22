@@ -55,7 +55,7 @@ public class NearbyHopperInventoriesTracker extends NearbyEntityTrackerBox<Inven
     }
 
     @Override
-    public void onEntityEnteredTrackedSubchunk(Entity entity) {
+    public void onEntityEnteredRange(Entity entity) {
         if (!(entity instanceof Inventory) || this.withinBox1.containsKey(entity)) {
             return;
         }
@@ -89,7 +89,7 @@ public class NearbyHopperInventoriesTracker extends NearbyEntityTrackerBox<Inven
     }
 
     @Override
-    public void onEntityLeftTrackedSubchunk(Entity entity) {
+    public void onEntityLeftRange(Entity entity) {
         if (this.withinBox1.isEmpty() || !(entity instanceof Inventory) || !withinBox1.containsKey(entity)) {
             return;
         }

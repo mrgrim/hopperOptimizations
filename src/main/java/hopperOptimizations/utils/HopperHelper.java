@@ -102,7 +102,7 @@ public abstract class HopperHelper {
         double x = pos.getX();
         double y = pos.getY();
         double z = pos.getZ();
-        return world.getEntities((Entity) null, new Box(x, y, z, x + 1D, y + 1D, z + 1D), EntityPredicates.VALID_INVENTORIES);
+        return world.getOtherEntities((Entity) null, new Box(x, y, z, x + 1D, y + 1D, z + 1D), EntityPredicates.VALID_INVENTORIES);
     }
 
     /**
@@ -256,7 +256,7 @@ public abstract class HopperHelper {
             List<Entity> inventoryEntities = tracker.getAllForDebug();
             inventoryEntities.removeIf((Entity inv) -> inv.removed);
 
-            List<Entity> inventoriesVanilla = world.getEntities((Entity) null, new Box(x - 0.5D, y - 0.5D, z - 0.5D, x + 0.5D, y + 0.5D, z + 0.5D), EntityPredicates.VALID_INVENTORIES);
+            List<Entity> inventoriesVanilla = world.getOtherEntities((Entity) null, new Box(x - 0.5D, y - 0.5D, z - 0.5D, x + 0.5D, y + 0.5D, z + 0.5D), EntityPredicates.VALID_INVENTORIES);
             if (!inventoryEntities.containsAll(inventoriesVanilla)) {
                 throw new IllegalStateException("HopperOptimizations did not find inventory entity/entities that vanilla found.");
             }

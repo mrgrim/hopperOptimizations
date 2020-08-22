@@ -163,14 +163,14 @@ public class NearbyHopperItemsTracker extends NearbyEntityTrackerBox<ItemEntity>
         if (searchForEntities) {
             List<ItemEntity> entityList = HopperBlockEntity.getInputItemEntities(this.myHopper);
             for (ItemEntity entity : entityList) {
-                this.onEntityEnteredTrackedSubchunk(entity);
+                this.onEntityEnteredRange(entity);
             }
         }
 
     }
 
     @Override
-    public void onEntityEnteredTrackedSubchunk(Entity entity) {
+    public void onEntityEnteredRange(Entity entity) {
         if (!(entity instanceof ItemEntity)) {
             return;
         } else if (!this.initialized) {
@@ -203,7 +203,7 @@ public class NearbyHopperItemsTracker extends NearbyEntityTrackerBox<ItemEntity>
     }
 
     @Override
-    public void onEntityLeftTrackedSubchunk(Entity entity) {
+    public void onEntityLeftRange(Entity entity) {
         if (!(entity instanceof ItemEntity) || this.withinSubchunksObjectToKey == null) {
             return;
         }

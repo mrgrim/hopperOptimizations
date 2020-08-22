@@ -152,7 +152,7 @@ public class NearbyEntityTrackerBox<T> implements ExactPositionListener {
     @Override
     @SuppressWarnings("unchecked")
     //@Override
-    public void onEntityEnteredTrackedSubchunk(Entity entity) {
+    public void onEntityEnteredRange(Entity entity) {
         if (!this.clazz.isInstance(entity) || this.subchunkContains((T) entity)) {
             return;
         }
@@ -164,7 +164,7 @@ public class NearbyEntityTrackerBox<T> implements ExactPositionListener {
     @Override
     @SuppressWarnings("unchecked")
     //@Override
-    public void onEntityLeftTrackedSubchunk(Entity entity) {
+    public void onEntityLeftRange(Entity entity) {
         if (this.withinBox.isEmpty() || !this.clazz.isInstance(entity)) {
             return;
         }
